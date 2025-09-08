@@ -27,7 +27,7 @@ output*/
 test_output/
 tarinit*/
 wandb/
-.DS_Store
+.DS_Store*
 # Files to ignore
 nohup.out
 run_script_copy.out
