@@ -1,0 +1,71 @@
+data:
+  name: pl
+  path: ./data/crossdocked_v1.1_rmsd1.0_pocket10
+  split: ./data/crossdocked_pocket10_pose_split.pt
+  transform:
+    ligand_atom_mode: add_aromatic
+    random_rot: False
+
+model:
+  ref_model_checkpoint: ./logs_diffusion/training_2025_05_22__09_02_40/checkpoints/34000.pt
+  model_mean_type: C0  # ['noise', 'C0']
+  beta_schedule: sigmoid
+  beta_start: 1.e-7
+  beta_end: 2.e-3
+  v_beta_schedule: cosine
+  v_beta_s: 0.01
+  
+  t_min: 0.0
+  center_pos_mode: protein
+  loss_v_weight: 1.
+  chamfer_loss_weight: 0.5
+  node_indicator: True
+  model_type: uni_o2
+  num_blocks: 1
+  num_layers: 9
+  hidden_dim: 128
+  n_heads: 16
+  edge_feat_dim: 4  # edge type feat
+  num_r_gaussian: 20
+  knn: 32 # !
+  num_node_types: 8
+  act_fn: relu
+  norm: True
+  cutoff_mode: knn  # [radius, none]
+  ew_net_type: global  # [r, m, none]
+  num_x2h: 1
+  num_h2x: 1
+  r_max: 10.
+  x2h_out_fc: False
+  sync_twoup: False
+
+train:
+  seed: 2021
+  batch_size: 16
+  num_workers: 0
+  n_acc_batch: 1
+  max_iters: 10000000
+  val_freq: 100
+  eval_freq: 1000
+  num_eval_pockets: 10
+  num_eval_samples_per_pocket: 3
+  protein_root: ./data/test_set
+  pos_noise_std: 0.1
+  max_grad_norm: 8.0
+  
+  # DPO specific parameters
+  use_dpo: True
+  beta_dpo: 5                    # DPO beta parameter for continuous losses
+  discete_beta_dpo: 0.1         # DPO beta parameter for discrete losses
+  
+  optimizer:
+    type: adam
+    lr: 5.e-8                    # Lower learning rate for DPO fine-tuning
+    weight_decay: 0
+    beta1: 0.95
+    beta2: 0.999
+  scheduler:
+    type: plateau
+    factor: 0.6
+    patience: 10
+    min_lr: 1.e-11
