@@ -1,6 +1,6 @@
-# DPO Training Integration
-
-This document explains how to use the integrated DPO (Direct Preference Optimization) training functionality alongside the standard diffusion model training.
+# MolFORM: Multi-modal Flow Matching for Structure-Based Drug Design
+This repository contains the official implementation of the flow matching diffusion model for small molecules generated using the DPO optimization.
+![Model](./assets/Model.png)
 
 ## Overview
 
