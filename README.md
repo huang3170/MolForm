@@ -1,19 +1,19 @@
 # MolFORM: Multi-modal Flow Matching for Structure-Based Drug Design
-This repository contains the official implementation of the flow matching diffusion model for small molecules generated using the DPO optimization.
-![Model](./assets/Model.png)
+This repository contains the official implementation of the flow matching diffusion model for small molecules generated using the DPO optimization.[MolForm](https://arxiv.org/abs/2507.05503).
+<p align="center">
+  <img src="./assets/Model.png" alt="Model" width="400" />
+</p>
 
-## Overview
+## Data
+The standard training data is prepared as follows: [Targetdiff](https://github.com/guanjq/targetdiff).
+The DPO optimized data is prepared folows [Alidiff](https://github.com/MinkaiXu/AliDiff)
+Both standard training/DPO traning checkpoints for sampling is stored at ()
 
+## Training
 The codebase now supports both:
 1. **Standard Training**: Original diffusion model training
 2. **DPO Training**: Preference-based optimization using paired data
 
-## Key Features
-
-- **Backward Compatibility**: All existing standard training functionality is preserved
-- **Unified Codebase**: Both training modes use the same base model and infrastructure
-
-## Usage
 
 ### Standard Training
 
