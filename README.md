@@ -1,4 +1,7 @@
 # MolFORM: Multi-modal Flow Matching for Structure-Based Drug Design
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/huang3170/MolForm/blob/main/LICENSE)
+
+
 This repository contains the official implementation of the flow matching diffusion model for small molecules generated using the DPO optimization. [Paper](https://arxiv.org/abs/2507.05503)
 <p align="center">
   <img src="./assets/Model.png" alt="Model" width="400" />
