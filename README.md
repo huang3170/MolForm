@@ -1,5 +1,5 @@
 # MolFORM: Multi-modal Flow Matching for Structure-Based Drug Design
-This repository contains the official implementation of the flow matching diffusion model for small molecules generated using the DPO optimization.[MolForm](https://arxiv.org/abs/2507.05503).
+This repository contains the official implementation of the flow matching diffusion model for small molecules generated using the DPO optimization. [Paper](https://arxiv.org/abs/2507.05503)
 <p align="center">
   <img src="./assets/Model.png" alt="Model" width="400" />
 </p>
