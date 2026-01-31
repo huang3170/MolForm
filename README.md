@@ -8,9 +8,9 @@ This repository contains the official implementation of the flow matching diffus
 </p>
 
 ## Data
-The standard training data is prepared as follows: [Targetdiff](https://github.com/guanjq/targetdiff).
-The DPO optimized data is prepared folows [Alidiff](https://github.com/MinkaiXu/AliDiff)
-Both standard training/DPO traning checkpoints for sampling is stored at ([google drive](https://drive.google.com/drive/folders/1pSYNKvdFKdkGLYfTqjIU1yW9gIN5Zd25?dmr=1&ec=wgc-drive-hero-goto))
+The standard training data is prepared as follows: [Targetdiff](https://github.com/guanjq/targetdiff). \
+The DPO optimized data is prepared as follows: [Alidiff](https://github.com/MinkaiXu/AliDiff). \
+Both standard/DPO training checkpoints for sampling are stored at ([google drive](https://drive.google.com/drive/folders/1pSYNKvdFKdkGLYfTqjIU1yW9gIN5Zd25?dmr=1&ec=wgc-drive-hero-goto))
 
 ## Training
 The codebase now supports both:
