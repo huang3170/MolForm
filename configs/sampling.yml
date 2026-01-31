@@ -1,5 +1,5 @@
 model:
-  checkpoint: ./logs_diffusion/training_2025_05_22__08_04_24/checkpoints/21500.pt
+  checkpoint: ./checkpoints/molform_dpo_model.pt
 sample:
   seed: 2021
   num_samples: 100
