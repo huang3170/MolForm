@@ -7,7 +7,7 @@ data:
     random_rot: False
 
 model:
-  ref_model_checkpoint: ./logs_diffusion/training_2025_05_22__09_02_40/checkpoints/34000.pt
+  ref_model_checkpoint: ./checkpoints/molform_base_model.pt
   model_mean_type: C0  # ['noise', 'C0']
   beta_schedule: sigmoid
   beta_start: 1.e-7
